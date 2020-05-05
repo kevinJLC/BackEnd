@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kevinJLC/BackEnd/issues"
   },
-  "homepage": "https://github.com/kevinJLC/BackEnd#readme"
+  "homepage": "https://github.com/kevinJLC/BackEnd#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
