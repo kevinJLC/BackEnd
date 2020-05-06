@@ -3,9 +3,10 @@ const app= express()
 const morgan=require('morgan')
 const {mongoose} = require('./database/database')
 const tasks = require('./routes/tasks')
+const path=require('path');
 //const cors=require('cors')
 /*
-const path=require('path');
+
 const request = require("request-promise");
 */
  
@@ -35,10 +36,10 @@ app.use(express.urlencoded({extended: false}))
 
     //Rutas
 app.use(tasks)
-/*app.use((req,res,next)=>{
-  res.sendFile(path.join(__dirname,"angular","index.html"))
+app.use((req,res,next)=>{
+  res.sendFile(path.join(__dirname,"public","index.html"))
 });
-*/
+
 
 console.log("Hola desde express")
 
