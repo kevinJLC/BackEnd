@@ -2,6 +2,7 @@ const router = require('express').Router()
 
 const productos=require('../Controllers/productos.controller')
 
+router.get('/',)
 router.get('/api/productos/insertar/info',productos.infoPostProducto)
 router.post('/api/productos/insertar',productos.PostProducto)
 router.get('/api/productos/consulta',productos.getProducto)

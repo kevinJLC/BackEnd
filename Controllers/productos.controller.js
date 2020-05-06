@@ -1,5 +1,9 @@
 const controller = {};
 
+controller.getBienvenida=(req, res) =>{
+    res.send("Api Rest de 8B1")
+}
+
 controller.infoPostProducto=(req, res) =>{
     res.json({
         FUNCION: "Insertar un producto",
