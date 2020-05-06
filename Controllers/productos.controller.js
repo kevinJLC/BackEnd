@@ -11,7 +11,28 @@ controller.infoPostProducto=(req, res) =>{
 
 controller.PostProducto=(req, res) =>{
     console.log(req.body)
-    res.send("Insertando producto");
+    res.json({
+        message: "Insertando producto",
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        stock: req.body.stock
+    });
+}
+
+controller.getProducto=(req, res) =>{
+    res.json({
+        nombre: "Batman figura de acción",
+        precio: 2700,
+        stock: 10
+    });
+}
+
+controller.comprarProducto=(req, res) =>{
+    console.log(req.body)
+    res.json({
+        message: "comprando producto",
+        nombre: req.body.nombre
+    });
 }
 
 
