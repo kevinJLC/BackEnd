@@ -71,8 +71,13 @@
                             Todas las rutas están protegidas por verificación de token, <br>
                             el servidor verifica que todas las peticiones a una ruta <br>
                             (excepto a /api/usuario/login) contengan un token en el <br>
-                            campo 'authorization' y que sea válido puesto que tienen un<br>
-                            tiempo de expiración de 5 horas.
+                            la cabecera 'authorization' y que sea válido puesto que tienen un<br>
+                            tiempo de expiración de 5 horas. <br><br>
+                            El token es del tipo JSON WEB TOKEN y se apega al estándar <br>
+                            de autorización OAuth 2.0, que es “Bearer”. <br>
+                            Al final en el campo 'Authorization' debes tener algo como esto <br><br>
+                            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MS..." <br><br>
+                            no olvides el espacio entre Bearer y el token
                             </div>
                             <br> <br><br>
                             
