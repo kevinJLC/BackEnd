@@ -1,5 +1,5 @@
 const controller = {};
-
+const jwt = require("jsonwebtoken")
 
 
 controller.infoPostLogin=(req, res) =>{
@@ -8,7 +8,7 @@ controller.infoPostLogin=(req, res) =>{
         PROTOCOLO: "post",
         INPUT: "Recibe un json con los datos del supuesto usuarios",
         JSON: "{correo,contraseña}",
-        OUTPUT: "Devuelve json con un token, tiempo de expiración, id_usuario, nombre_usuario, correo [este token lo debes enviar con todas las peticiones que se hagan]"
+        OUTPUT: "Devuelve json con un token,idUsuario, nombre_usuario, correo y rol. [este token lo debes enviar con todas las peticiones que se hagan]"
     })
 }
 controller.infoPostHistorial=(req, res) =>{
@@ -41,12 +41,19 @@ controller.infoPostDatos=(req, res) =>{
 
 controller.postLogin=(req, res) =>{
     console.log(req.body)
-    res.json({
-        message: "Insertando producto",
-        nombre: req.body.nombre,
-        precio: req.body.precio,
-        stock: req.body.stock
-    });
+    const id = 1
+    const nombre = "kevin"
+    const correo = "correo@hotmail.com"
+    const rol = "Administrador"
+
+    const token = jwt.sign({ id: id,nombre: nombre,correo: req.body.correo, rol: rol},'colomos2019',{expiresIn: "5h"});
+    res.status(200).json({
+        token: token,
+        idUser: id,
+        nombre: nombre,
+        correo: correo,
+        rol: rol
+    })
 }
 
 
