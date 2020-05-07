@@ -35,9 +35,9 @@
             <a   href="https://st0re.herokuapp.com/api/productos/listado/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Listado de productos <br> <p style="color: oldlace;">Recibe una petición get y retorna todos los productos de la tienda <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/listado</p> </p> </a>
             <a   href="https://st0re.herokuapp.com/api/productos/semicompra/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Añadir al carrito <br> <p style="color: oldlace;">Recibe un JSON con los datos de la semicompra y lo guarda en la BD <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/semicompra</p> </p> </a>
             <a   href="https://st0re.herokuapp.com/api/usuario/login/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Iniciar sesion <br> <p style="color: oldlace;">Recibe un JSON con los datos del supuesto usuario y verifica que exista <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/login</p> </p> </a>
-            <a   href="https://st0re.herokuapp.com/api/usuario/historial/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Historial de compras del usuario <br> <p style="color: oldlace;">Recibe un JSON con los datos del usuario y busca todas sus compras <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/historial</p> </p> </a>
-            <a   href="https://st0re.herokuapp.com/api/usuario/carrito/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Carrito de compras del usuario <br> <p style="color: oldlace;">Recibe un JSON con los datos del usuario y busca todas sus productos en el carrito de compras <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/carrito</p> </p> </a>
-            <a   href="https://st0re.herokuapp.com/api/usuario/datos/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Datos del usuario <br> <p style="color: oldlace;">Recibe un JSON con el nombre del usuario y busca todos los datos del usuario <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/datos</p> </p> </a>
+            <a   href="https://st0re.herokuapp.com/api/usuario/historial/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Historial de compras del usuario <br> <p style="color: oldlace;">Recibe una petición get y busca todas sus compras <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/historial</p> </p> </a>
+            <a   href="https://st0re.herokuapp.com/api/usuario/carrito/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Carrito de compras del usuario <br> <p style="color: oldlace;">Recibe una petición get y busca todas sus productos en el carrito de compras <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/carrito</p> </p> </a>
+            <a   href="https://st0re.herokuapp.com/api/usuario/datos/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Datos del usuario <br> <p style="color: oldlace;">Recibe una petición get y busca todos los datos del usuario <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/datos</p> </p> </a>
             <p>
                 <br><br>
             </p>
@@ -51,6 +51,55 @@
                             La bases de datos usada es no relacional con MongoDB, alojada en un <br>
                             cluster de Mongo Atlas DB.
                             <br><br><br>
+
+                            <div style="font-size: 5vh; color: white;">Rutas:</div> <br>
+                            <div style="font-weight: 200; background-color: rgb(0, 0, 27);">                            
+                            https://st0re.herokuapp.com/api/productos/insertar  post<br>
+                            https://st0re.herokuapp.com/api/productos/comprar   post<br>
+                            https://st0re.herokuapp.com/api/productos/listado   get <br>
+                            https://st0re.herokuapp.com/api/productos/semicompra   post<br>
+                            https://st0re.herokuapp.com/api/usuario/login       post<br>
+                            https://st0re.herokuapp.com/api/usuario/historial   get<br>
+                            https://st0re.herokuapp.com/api/usuario/carrito     get<br>
+                            https://st0re.herokuapp.com/api/usuario/carrito     get<br>
+                            https://st0re.herokuapp.com/api/usuario/datos       get<br>
+                            </div>
+
+                            <br>
+                            <div style="font-size: 5vh; color: white;">Acceso a las rutas:</div> <br>
+                            <div style="font-weight: 200; background-color: rgb(0, 0, 27);">
+                            Todas las rutas están protegidas por verificación de token, <br>
+                            el servidor verifica que todas las peticiones a una ruta <br>
+                            (excepto a /api/usuario/login) contengan un token en el <br>
+                            campo 'authorization' y que sea válido puesto que tienen un<br>
+                            tiempo de expiración de 5 horas.
+                            </div>
+                            <br> <br><br>
+                            
+                            <div style="font-size: 5vh; color: white;">Generación de tokens:</div> <br> <br>
+                            <div style="font-weight: 200; background-color: rgb(0, 0, 27);">
+                            Para recibir un token del servidor basta con que envie <br>
+                            un objeto JSON de la siguiente forma <br><br>
+                            {correo: "correo@example.com", contraseña: "contra1234"} <br><br>
+                            El servidor validará su inicio de sesión y de ser correcto <br>
+                            le regresará un json de la siguiente forma <br><br>
+                            {<br>
+                                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoia2V2aW4iLCJjb3JyZW8iOiJjb3JyZW9AZ21haWwuY29tIiwicm9sIjoiQ2xpZW50ZSIsImlhdCI6MTU4ODg5MjQ5OCwiZXhwIjoxNTg4OTEwNDk4fQ.g3-ZEqqCSoU8xb3dkMJjP0XuETPa_vr9_4B1fKAZcjc",<br>
+                                "idUser": 1, <br>
+                                "nombre": "kevin", <br>
+                                "correo": "correo@hotmail.com", <br>
+                                "rol": "Cliente" <br>
+                            }
+                            </div> 
+                            <br> <br>
+
+
+
+
+                            
+
+
+
         
         
                     
