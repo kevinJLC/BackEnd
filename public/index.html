@@ -18,7 +18,7 @@
             <div class="col-12" style="color: white;">
                 <p> <br>Explicación: <br>
                     ApiRest se creó para dar respuestas a las peticiones de la tienda web de la<br>
-                    materia de sistemas distribuidos, son 7 rutas a donde enviar las peticiones. <br><br>
+                    materia de sistemas distribuidos, son 8 rutas a donde enviar las peticiones. <br><br>
                     
                     Cada ruta se encarga de devolver información valiosa para el funcionamiento <br>
                     del sistema.
@@ -31,17 +31,33 @@
             
             </p></div>
             <a   href="https://st0re.herokuapp.com/api/productos/insertar/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Insertar productos <br> <p style="color: oldlace;">Recibe un JSON con los datos del nuevo producto y lo inserta en la base de datos <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/insertar</p> </p> </a>
-            <a   href="https://st0re.herokuapp.com/api/productos/comprar/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Comprar producto <br> <p style="color: oldlace;">Recibe un JSON con los datos del producto, resta uno a la base de datos, lo agrega al carrito, lo agrega al historial de usuario, solicita un retiro al banco <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/comprar</p> </p> </a>
+            <a   href="https://st0re.herokuapp.com/api/productos/comprar/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Comprar producto <br> <p style="color: oldlace;">Recibe un JSON con los datos del producto, resta uno a la base de datos, lo agrega al carrito, lo agrega al historial de usuario, solicita un retiro al banco <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/comprar</p> </p> </a>         
+            <a   href="https://st0re.herokuapp.com/api/productos/listado/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Listado de productos <br> <p style="color: oldlace;">Recibe una petición get y retorna todos los productos de la tienda <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/listado</p> </p> </a>
+            <a   href="https://st0re.herokuapp.com/api/productos/semicompra/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Añadir al carrito <br> <p style="color: oldlace;">Recibe un JSON con los datos de la semicompra y lo guarda en la BD <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/semicompra</p> </p> </a>
             <a   href="https://st0re.herokuapp.com/api/usuario/login/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Iniciar sesion <br> <p style="color: oldlace;">Recibe un JSON con los datos del supuesto usuario y verifica que exista <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/login</p> </p> </a>
             <a   href="https://st0re.herokuapp.com/api/usuario/historial/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Historial de compras del usuario <br> <p style="color: oldlace;">Recibe un JSON con los datos del usuario y busca todas sus compras <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/historial</p> </p> </a>
             <a   href="https://st0re.herokuapp.com/api/usuario/carrito/info" class="col-4 text-center" style="background-color: rgb(108, 101, 112); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Carrito de compras del usuario <br> <p style="color: oldlace;">Recibe un JSON con los datos del usuario y busca todas sus productos en el carrito de compras <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/carrito</p> </p> </a>
             <a   href="https://st0re.herokuapp.com/api/usuario/datos/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Datos del usuario <br> <p style="color: oldlace;">Recibe un JSON con el nombre del usuario y busca todos los datos del usuario <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/usuario/datos</p> </p> </a>
-            <a   href="https://st0re.herokuapp.com/api/productos/listado/info" class="col-4 text-center" style="background-color: rgb(165, 165, 165); height: 25vh; cursor: pointer;    border-style: solid; border-width: .5vw; border-color: rgb(248, 231, 231); font-weight: 500;">  Listado de productos <br> <p style="color: oldlace;">Recibe una petición get y retorna todos los productos de la tienda <br> <p style="color: rgb(29, 36, 56);">https://st0re.herokuapp.com/api/productos/listado</p> </p> </a>
-
+            <p>
+                <br><br>
+            </p>
 
         </div>
+        <div class="row" style="background-color: rgb(1, 11, 31); ">
+                <div class="col-12" style="color: white;">
+                        <p> <br><br>
+                            ApiRest se programó en nodeJS con el frameword express y está alojado <br>
+                            en un servidor gratuito de heroku. <br><br>
+                            La bases de datos usada es no relacional con MongoDB, alojada en un <br>
+                            cluster de Mongo Atlas DB.
+        
+        
+                    
+                    </p></div>
+        </div>
+
         <div class="row" style="background-color: rgb(0, 0, 0); height: 10vh;">
-            <div id="col-12 text-center"> </div>
+            <div class="col-12 text-center" style="color: rgb(255, 253, 255);"> Todos los derechos reservados a 8B1 y su norteño banda</div>
         </div>
     </div>
 
