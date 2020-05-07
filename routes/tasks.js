@@ -21,8 +21,8 @@ router.post('/api/productos/comprar',productos.comprarProducto)
 //Usuario
 router.get('/api/usuario/login/info',usuario.infoPostLogin)
 router.get('/api/usuario/historial/info',usuario.infoPostHistorial)
-router.post('/api/usuario/carrito/info',usuario.infoPostCarrito)
-router.post('/api/usuario/datos/info',usuario.infoPostDatos)
+router.get('/api/usuario/carrito/info',usuario.infoPostCarrito)
+router.get('/api/usuario/datos/info',usuario.infoPostDatos)
 
 
 
