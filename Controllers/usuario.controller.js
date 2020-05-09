@@ -1,5 +1,10 @@
 const controller = {};
 const jwt = require("jsonwebtoken")
+const usuario=require('../Models/usuario');
+const producto=require('../Models/producto')
+const compra=require('../Models/compra')
+const banco=require('../Models/banco');
+const carrito=require('../Models/carrito');
 
 //información
 controller.infoPostLogin=(req, res) =>{
@@ -44,39 +49,55 @@ controller.infoGetDatos=(req, res) =>{
 //funciones
 controller.postLogin=(req, res) =>{
     console.log(req.body)
-    const id = 1
-    const nombre = "kevin"
-    const correo = "correo@hotmail.com"
-    const rol = "Cliente"
 
-    const token = jwt.sign({ id: id,nombre: nombre,correo: req.body.correo, rol: rol},'colomos2019',{expiresIn: "5h"});
-    res.status(200).json({
-        token: token,
-        idUser: id,
-        nombre: nombre,
-        correo: correo,
-        rol: rol
+    usuario.findOne({correo: req.body.correo,contraseña: req.body.contraseña})
+    .then(user => {
+        const token = jwt.sign({ id: user.id,nombre: user.nombre,correo: user.correo, rol: user.rol},'colomos2019',{expiresIn: "5h"});
+        res.status(200).json({
+            operación: true,
+            message: "Login exitoso",
+            token: token,
+            idUser: user.id,
+            nombre: user.nombre,
+            correo: user.correo,
+            rol: user.rol
+        })
+    })
+    .catch(err => {
+        console.log(err) 
+        res.json({
+            operación: false,
+            message: "Login fallido"
+        })
     })
 }
-controller.getHistorial=(req, res) =>{
-    
-    const historial = [
-        {producto:"Agua", precio:"15"},
-        {producto:"Carne Molida 300gr", precio:"150"}
-    ]
-    res.json({
-        historial: historial
-    })
+controller.getHistorial=async (req, res) =>{
+    console.log(req.userData)
+    if(req.userData.rol=="Cliente"){
+        const historial = await compra.find({id_comprador: req.userData.id})
+        res.json(historial)
+    }
+    else{
+        res.json({
+            opreacion: false,
+            message: "Solo los clientes tiene historial de compras"
+        })
+    }
+
+
 }
-controller.getCarrito=(req, res) =>{
-    
-    const carrito = [
-        {producto:"Agua", precio:"15"},
-        {producto:"Carne Molida 300gr", precio:"150"}
-    ]
-    res.json({
-        carrito: carrito
-    })
+controller.getCarrito= async (req, res) =>{
+    console.log(req.userData)
+    if(req.userData.rol=="Cliente"){
+        const carritos = await carrito.find({id_comprador: req.userData.id})
+        res.json(carritos)
+    }
+    else{
+        res.json({
+            opreacion: false,
+            message: "Solo los clientes tiene carrito"
+        })
+    }
 }
 controller.getDatos=(req, res) =>{ 
     res.json({

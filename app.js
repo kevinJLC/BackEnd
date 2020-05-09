@@ -4,6 +4,7 @@ const morgan=require('morgan')
 const {mongoose} = require('./database/database')
 const tasks = require('./routes/tasks')
 const path=require('path');
+
 //const cors=require('cors')
 /*
 
@@ -41,6 +42,30 @@ app.use((req,res,next)=>{
 });
 
 
-console.log("Hola desde express")
 
+
+/*
+-------> añadir un usuario
+const Usuario=require('./Models/usuario');
+const newUser = new Usuario ({
+tipo: "Cliente",
+nombre: "Pedro Páramo",
+correo: "sexi_pedro@hotmail.com",
+contraseña: "comala123"
+})
+newUser.save()
+
+------> añadir una cuanta de banco
+const cuenta=require('./Models/banco');
+const newCuenta = new cuenta ({
+correo: "sexi_pedro@hotmail.com",
+contraseña: "comala123",
+saldo: "1500"
+})
+newCuenta.save()
+*/
+
+
+
+console.log("Server start")
 module.exports=app;
