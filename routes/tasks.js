@@ -27,6 +27,7 @@ router.post('/api/productos/semicompra',autorizacion,productos.semicompraProduct
         router.get('/api/usuario/carrito/info',usuario.infoGetCarrito)
         router.get('/api/usuario/datos/info',usuario.infoGetDatos)
 
+router.post('/api/usuario/registro',usuario.postRegistro)
 router.post('/api/usuario/login',usuario.postLogin)
 router.get('/api/usuario/historial',autorizacion,usuario.getHistorial)
 router.get('/api/usuario/carrito',autorizacion,usuario.getCarrito)

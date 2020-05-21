@@ -107,6 +107,24 @@ controller.getDatos=(req, res) =>{
         rol: req.userData.rol
     })
 }
+controller.postRegistro=(req,res) =>{
+    console.log(req.body)
+        const newUser = new usuario ({
+        rol: req.body.rol,
+        nombre: req.body.nombre,
+        correo: req.body.correo,
+        contraseña: req.body.contraseña
+        })
+        newUser.save()
+        .then(result =>{
+            console.log(result)
+            res.json({operacion: true})
+        })
+        .catch(err =>{
+            console.log(err)
+            res.json({operacion: false})
+        })
+}
 
 
 
