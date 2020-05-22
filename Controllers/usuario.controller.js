@@ -75,7 +75,12 @@ controller.getHistorial=async (req, res) =>{
     console.log(req.userData)
     if(req.userData.rol=="Cliente"){
         const historial = await compra.find({id_comprador: req.userData.id})
-        res.json(historial)
+        var listado = []
+        historial.forEach(function (value,index){
+            let newCompra = value.producto + " | precio: " + value.precio + " cantidad: " + value.cantidad + " total: " + value.total
+            listado.push(newCompra)
+        })
+        res.json(listado)
     }
     else{
         res.json({
@@ -126,6 +131,22 @@ controller.postRegistro=(req,res) =>{
         })
 }
 
+controller.deleteCarrito=async (req,res) =>{
+    console.log(req.body)
+    await carrito.findOneAndDelete({producto: req.body.producto})
+    .then(result =>{
+        res.json({
+            operacion: true
+        })
+
+    })
+    .catch(err=>{
+        res.json({
+            operacion: false,
+            message: "No se pudo eliminar"
+        })
+    })
+}
 
 
 
