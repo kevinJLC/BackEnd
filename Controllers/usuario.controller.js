@@ -5,6 +5,8 @@ const producto=require('../Models/producto')
 const compra=require('../Models/compra')
 const banco=require('../Models/banco');
 const carrito=require('../Models/carrito');
+const rgb=require('../Models/embebidos');
+
 
 //información
 controller.infoPostLogin=(req, res) =>{
@@ -146,6 +148,40 @@ controller.deleteCarrito=async (req,res) =>{
             message: "No se pudo eliminar"
         })
     })
+}
+
+
+controller.postRGB= async (req,res) =>{
+    console.log(req.body)
+        await rgb.deleteMany()
+        const newRGB = new rgb ({
+        r: req.body.r,
+        g: req.body.g,
+        b: req.body.b
+        })
+        newRGB.save()
+        .then(result =>{
+            console.log(result)
+            res.json({operacion: true})
+        })
+        .catch(err =>{
+            console.log(err)
+            res.json({operacion: false})
+        })
+}
+
+controller.getRGB= async (req,res) =>{
+    console.log(req.body)
+    
+        const RGB = await rgb.findOne()
+        
+        console.log(RGB)
+        res.json({
+            r: RGB.r,
+            g: RGB.g,
+            b: RGB.b
+        })
+
 }
 
 
