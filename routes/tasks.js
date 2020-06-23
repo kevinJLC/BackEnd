@@ -6,7 +6,7 @@ const usuario=require('../Controllers/usuario.controller')
 
 
 
-//Productos
+/*Productos
         router.get('/api/productos/insertar/info',productos.infoPostProducto)
         router.get('/api/productos/comprar/info',productos.infoComprarProducto)
         router.get('/api/productos/listado/info',productos.infoGetProducto)
@@ -17,7 +17,7 @@ router.post('/api/productos/comprar',autorizacion,productos.comprarProducto)
 router.get('/api/productos/listado',autorizacion,productos.getProducto)
 router.post('/api/productos/semicompra',autorizacion,productos.semicompraProducto)
 
-
+*/
 
 
 
