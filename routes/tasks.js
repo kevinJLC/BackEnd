@@ -33,6 +33,7 @@ router.get('/api/usuario/historial',autorizacion,usuario.getHistorial)
 router.get('/api/usuario/carrito',autorizacion,usuario.getCarrito)
 router.get('/api/usuario/datos',autorizacion,usuario.getDatos)
 router.post('/api/usuario/deletecarrito',autorizacion,usuario.deleteCarrito)
+
 router.post('/embebidos',usuario.postRGB)
 router.get('/embebidos/get',usuario.getRGB)
 
